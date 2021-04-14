@@ -2,20 +2,22 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // Components
-import { Header } from './components/layout/Header'
-import { Main } from './components/layout/Main'
-import { Footer } from './components/layout/Footer'
+import { Header } from './components/Header'
+import { Main } from './components/Main'
+import { Footer } from './components/Footer'
 
 const rootElement = document.querySelector('#root')
 
-function Layout() {
-  return (
-    <div className="container">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
-  )
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
+    )
+  }
 }
 
-ReactDOM.render(<Layout />, rootElement)
+ReactDOM.render(<App />, rootElement)
